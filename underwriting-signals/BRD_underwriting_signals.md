@@ -19,9 +19,9 @@ Wisaaq is Haball's Islamic supply chain financing product, using Tijarah and Mur
 
 The numbers behind this are structural, not incidental:
 
-- Roughly 90% of Pakistani retailers and distributors have zero formal digital transaction history (source: internal research).
-- Pakistan's informal economy is roughly 40% of GDP and 72% of employment (source: internal research).
-- Traditional lenders leave about 94% of SMEs without formal credit access. Only around 200,000 of an estimated 3.2 million SMEs have any formal bank credit relationship (source: internal research).
+- Roughly 90% of Pakistani retailers and distributors have zero formal digital transaction history (source: desk research).
+- Pakistan's informal economy is roughly 40% of GDP and 72% of employment (source: desk research).
+- Traditional lenders leave about 94% of SMEs without formal credit access. Only around 200,000 of an estimated 3.2 million SMEs have any formal bank credit relationship (source: desk research).
 
 The implication is direct. For a large share of the distributors Wisaaq wants to reach, a conventional credit-scoring approach is not just weak, it is structurally impossible, because the underlying data was never generated. This document treats that gap as the core business problem: Wisaaq's addressable pool is constrained by the absence of a formal credit file, not by the absence of creditworthy distributors.
 
@@ -72,8 +72,8 @@ FBR's mandatory e-invoicing rollout (effective Nov 2025) changes the arithmetic 
 
 | Factor | Staying informal (cash-based) | Digitizing (Wasal + Blink on Haball rails) |
 |--------|-------------------------------|---------------------------------------------|
-| Upfront cost | Low or none directly, but rising exposure | Roughly PKR 100,000 to 500,000 setup cost (source: internal research) |
-| FBR non-compliance risk | Penalties up to 2% of transaction value under the e-invoicing mandate (source: internal research) | Compliant by construction via Wasal's instant FBR registration |
+| Upfront cost | Low or none directly, but rising exposure | Roughly PKR 100,000 to 500,000 setup cost (source: desk research) |
+| FBR non-compliance risk | Penalties up to 2% of transaction value under the e-invoicing mandate (source: desk research) | Compliant by construction via Wasal's instant FBR registration |
 | Access to financing | Effectively none; no file, no eligibility | Generates the invoice, order, and payment history that could make Wisaaq underwriting tractable |
 | Trajectory | Increasing friction as the mandate tightens | One-time cost, then eligibility and compliance both improve |
 

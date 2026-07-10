@@ -73,7 +73,7 @@ def payment_timeliness(payments: list[dict]) -> dict:
     }
 
 
-def volume_trend(orders: list[dict]) -> dict:
+def volume_trend(orders: list[dict], wasal_digitized: bool) -> dict:
     """FR3: slope of order volume over the window, expressed as % per quarter."""
     if len(orders) < MIN_ORDERS_FOR_TREND:
         return {"available": False, "observations": len(orders), "reason": "insufficient order history"}
@@ -105,7 +105,7 @@ def volume_trend(orders: list[dict]) -> dict:
         "available": True,
         "value_label": f"{direction} ({pct_per_quarter:+.1f}% / qtr)",
         "observations": len(orders),
-        "source": "Blink, corroborated by Wasal" if pct_per_quarter else "Blink",
+        "source": "Blink, corroborated by Wasal" if wasal_digitized else "Blink",
         "explain": "Direction of order volume over the window: rising, flat, or declining.",
     }
 
@@ -139,7 +139,7 @@ def compute_signal_profile(history: dict) -> dict:
     """Runs all signals for one distributor's history and returns a display-ready dict."""
     order_result = order_consistency(history["orders"])
     payment_result = payment_timeliness(history["payments"])
-    trend_result = volume_trend(history["orders"])
+    trend_result = volume_trend(history["orders"], history["wasal_digitized"])
 
     gaps = data_gaps(history, order_result, payment_result, trend_result)
 

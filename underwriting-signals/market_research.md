@@ -5,9 +5,9 @@
 
 ### 1. Market Context
 
-Pakistan's economy runs heavily on informal activity. The informal economy is roughly 40% of GDP and 72% of employment (source: internal research). At the retail and distribution layer, roughly 90% of retailers and distributors have zero formal digital transaction history (source: internal research). Formal credit reaches very few businesses: traditional lenders leave about 94% of SMEs without formal credit access, and only around 200,000 of an estimated 3.2 million SMEs have any formal bank credit relationship (source: internal research).
+Pakistan's economy runs heavily on informal activity. The informal economy is roughly 40% of GDP and 72% of employment (source: desk research). At the retail and distribution layer, roughly 90% of retailers and distributors have zero formal digital transaction history (source: desk research). Formal credit reaches very few businesses: traditional lenders leave about 94% of SMEs without formal credit access, and only around 200,000 of an estimated 3.2 million SMEs have any formal bank credit relationship (source: desk research).
 
-Layered on top of this is FBR's mandatory e-invoicing rollout (effective Nov 2025), which imposes real upfront cost on small merchants, roughly PKR 100,000 to 500,000, with penalties up to 2% of transaction value for non-compliance (source: internal research). This pulls in two directions at once: it pushes merchants toward digitization through the mandate, while the upfront cost pushes the smallest merchants further from it in the short term.
+Layered on top of this is FBR's mandatory e-invoicing rollout (effective Nov 2025), which imposes real upfront cost on small merchants, roughly PKR 100,000 to 500,000, with penalties up to 2% of transaction value for non-compliance (source: desk research). This pulls in two directions at once: it pushes merchants toward digitization through the mandate, while the upfront cost pushes the smallest merchants further from it in the short term.
 
 ### 2. Why This Matters to Haball Specifically
 
