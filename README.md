@@ -17,7 +17,7 @@ To be clear about what this is not: it is not a proposal for what Haball should 
 
 ![Signal Profile Wireframes](assets/signal-profile-wireframes.png)
 
-**Live demo:** not yet deployed. Run locally with the steps below, or deploy to Streamlit Community Cloud (share.streamlit.io) and drop the link here.
+**Live demo:** [haball-pm-portfolio-cawwv7atcacfvz7surz4wn.streamlit.app](https://haball-pm-portfolio-cawwv7atcacfvz7surz4wn.streamlit.app/)
 
 **Deliverables**
 - [BRD](underwriting-signals/BRD_underwriting_signals.md)
