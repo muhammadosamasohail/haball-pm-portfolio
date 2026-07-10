@@ -17,7 +17,7 @@ To be clear about what this is not: it is not a proposal for what Haball should 
 
 ![Signal Profile Wireframes](assets/signal-profile-wireframes.png)
 
-**Live demo:** see note in Running Locally below (add link here once deployed).
+**Live demo:** not yet deployed. Run locally with the steps below, or deploy to Streamlit Community Cloud (share.streamlit.io) and drop the link here.
 
 **Deliverables**
 - [BRD](underwriting-signals/BRD_underwriting_signals.md)
@@ -36,7 +36,7 @@ To be clear about what this is not: it is not a proposal for what Haball should 
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/muhammadosamasohail99/haball-pm-portfolio.git
+git clone https://github.com/muhammadosamasohail/haball-pm-portfolio.git
 cd haball-pm-portfolio
 
 # 2. Install dependencies
