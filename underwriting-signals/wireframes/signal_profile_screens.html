@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haball Wisaaq, Alternative-Signal Underwriting Wireframes</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #EEF1F4;
+    padding: 40px 24px;
+    color: #1A2233;
+  }
+
+  .page-header { text-align: center; margin-bottom: 36px; }
+  .page-header h1 { font-size: 20px; font-weight: 700; }
+  .page-header p { font-size: 13px; color: #6B7280; margin-top: 6px; max-width: 640px; margin-left: auto; margin-right: auto; }
+
+  .screens-row {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .screen-container { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+
+  .screen-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6B7280;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+
+  /* Desktop app frame */
+  .app-frame {
+    width: 620px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #E2E6EB;
+    overflow: hidden;
+  }
+
+  .browser-bar {
+    background: #F5F6F8;
+    border-bottom: 1px solid #E2E6EB;
+    padding: 9px 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: #D5D9DE; }
+
+  .app-body { padding: 22px 22px 20px; }
+
+  /* Screen 1 header */
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+  .profile-header h2 { font-size: 17px; font-weight: 700; }
+  .profile-header .sub { font-size: 12.5px; color: #6B7280; margin-top: 3px; }
+
+  .tier-badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: #FFF4E5;
+    color: #9A5B00;
+    border: 1px solid #FFE1B0;
+    white-space: nowrap;
+  }
+  .tier-note {
+    font-size: 9.5px;
+    color: #9A9FA6;
+    display: block;
+    text-align: right;
+    margin-top: 3px;
+    font-weight: 400;
+  }
+
+  .decision-support-note {
+    font-size: 11.5px;
+    color: #7A828E;
+    margin-top: 8px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed #E2E6EB;
+  }
+
+  .context-strip {
+    display: flex;
+    gap: 18px;
+    margin: 14px 0;
+    font-size: 12px;
+  }
+  .context-strip div { color: #4B5563; }
+  .context-strip b { color: #1A2233; }
+
+  .cards-row { display: flex; gap: 12px; margin-bottom: 16px; }
+  .metric-card {
+    flex: 1;
+    background: #FAFBFC;
+    border: 1px solid #E5E8EC;
+    border-radius: 8px;
+    padding: 12px;
+  }
+  .metric-card .label { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: #6B7280; }
+  .metric-card .value { font-size: 16px; font-weight: 700; margin: 4px 0 6px; color: #16324A; }
+  .metric-card .explain { font-size: 11.5px; color: #4B5563; line-height: 1.35; margin-bottom: 8px; }
+  .source-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    background: #EAF2FF;
+    color: #1E5FBF;
+    padding: 2px 7px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+  }
+  .micro-note { font-size: 10px; color: #9A9FA6; }
+
+  .gap-callout {
+    background: #FFF9EC;
+    border: 1px solid #FCE7B8;
+    border-radius: 8px;
+    padding: 11px 13px;
+    font-size: 12px;
+    color: #6B4A00;
+    margin-bottom: 14px;
+  }
+  .gap-callout .gap-title { font-weight: 700; font-size: 11.5px; margin-bottom: 3px; }
+
+  .footer-note {
+    font-size: 10.5px;
+    color: #9A9FA6;
+    border-top: 1px solid #EEF0F2;
+    padding-top: 10px;
+    line-height: 1.4;
+  }
+
+  /* Screen 2 */
+  .sources-table { width: 100%; border-collapse: collapse; font-size: 12px; margin: 14px 0; }
+  .sources-table th {
+    text-align: left;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #6B7280;
+    border-bottom: 1px solid #E2E6EB;
+    padding: 6px 8px;
+  }
+  .sources-table td { padding: 8px; border-bottom: 1px solid #F0F2F4; color: #374151; }
+  .sources-table .tag-blink { color: #1E5FBF; font-weight: 600; }
+  .sources-table .tag-wasal { color: #0F8A5F; font-weight: 600; }
+
+  .flywheel-note {
+    background: #F5FAF7;
+    border: 1px solid #D8EEE1;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 12px;
+    color: #2C4A3B;
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Wisaaq, Alternative-Signal Underwriting Wireframes</h1>
+  <p>Content wireframes only, built from the accompanying spec. Illustrative data throughout. Decision-support views for a credit officer, not an automated system.</p>
+</div>
+
+<div class="screens-row">
+
+  <!-- SCREEN 1 -->
+  <div class="screen-container">
+    <div class="screen-label">Screen 1: Distributor Signal Profile</div>
+    <div class="app-frame">
+      <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="app-body">
+
+        <div class="profile-header">
+          <div>
+            <h2>Karachi Traders Pvt Ltd</h2>
+            <div class="sub">Distributor ID: DST-04821</div>
+          </div>
+          <div style="text-align:right;">
+            <span class="tier-badge">Thin file, needs manual review</span>
+            <span class="tier-note">Illustrative only. Not a rating or a decision.</span>
+          </div>
+        </div>
+        <div class="decision-support-note">Decision-support view. Not an automated decision.</div>
+
+        <div class="context-strip">
+          <div>Data window: <b>Last 12 months</b></div>
+          <div>Observations: <b>34 orders, 31 payments</b></div>
+          <div>Sources active: <b>Blink, Wasal</b></div>
+        </div>
+
+        <div class="cards-row">
+          <div class="metric-card">
+            <div class="label">Order Consistency</div>
+            <div class="value">Steady (CV 0.18)</div>
+            <div class="explain">How regular this distributor's orders are. Lower variation means steadier ordering.</div>
+            <span class="source-tag">From Blink</span>
+            <div class="micro-note">Based on 34 orders over 12 months.</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Payment Timeliness</div>
+            <div class="value">88% on time</div>
+            <div class="explain">Share of payments made on or before the due date.</div>
+            <span class="source-tag">From Blink</span>
+            <div class="micro-note">Based on 31 payments.</div>
+          </div>
+          <div class="metric-card">
+            <div class="label">Order-Volume Trend</div>
+            <div class="value">Rising (+6% / qtr)</div>
+            <div class="explain">Direction of order volume over the window: rising, flat, or declining.</div>
+            <span class="source-tag">From Blink, corroborated by Wasal</span>
+            <div class="micro-note">Slope over last 12 months.</div>
+          </div>
+        </div>
+
+        <div class="gap-callout">
+          <div class="gap-title">Data gaps</div>
+          No Wasal invoice history found. Payment timeliness based on 6 payments only in the most recent quarter, below the recommended minimum. Treat metrics as low-confidence.
+        </div>
+
+        <div class="footer-note">This screen presents behavioral signals to support a credit officer's judgment. It does not underwrite, score, or approve. Figures shown are illustrative.</div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 2 -->
+  <div class="screen-container">
+    <div class="screen-label">Screen 2: Signal Sources (reference)</div>
+    <div class="app-frame">
+      <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="app-body">
+
+        <h2 style="font-size:17px; font-weight:700;">Signal Sources</h2>
+        <div class="sub" style="font-size:12.5px; color:#6B7280; margin-top:3px; margin-bottom: 4px;">Where each signal input would come from within Haball's ecosystem (illustrative).</div>
+
+        <table class="sources-table">
+          <tr><th>Signal</th><th>Source product</th><th>What it draws on</th></tr>
+          <tr><td>Order consistency</td><td class="tag-blink">Blink</td><td>Order timestamps and values</td></tr>
+          <tr><td>Payment timeliness</td><td class="tag-blink">Blink</td><td>Payment due vs. settled dates</td></tr>
+          <tr><td>Order-volume trend</td><td><span class="tag-blink">Blink</span> + <span class="tag-wasal">Wasal</span></td><td>Order volume over time, corroborated by invoices</td></tr>
+          <tr><td>Digitization confirmed</td><td class="tag-wasal">Wasal</td><td>Invoice records and FBR registration status</td></tr>
+        </table>
+
+        <div class="flywheel-note">Blink and Wasal generate the behavioral data. The Signal Engine reads it. Wisaaq's credit officer uses it. The more a distributor transacts and invoices on Haball's rails, the more underwritable they become.</div>
+
+        <div class="footer-note">Illustrative mapping for a work sample. Not a description of Haball's live data pipeline.</div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
